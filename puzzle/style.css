@@ -1,0 +1,22 @@
+img {
+    position: absolute;
+    opacity: 0.4;
+    transition: all 1s;
+}
+
+img:hover {
+    opacity: 1;
+}
+
+#pz2 {
+    left: 260px;
+}
+
+#pz3 {
+    top: 300px;
+}
+
+#pz4 {
+    top: 340px;
+    left: 220px;
+}

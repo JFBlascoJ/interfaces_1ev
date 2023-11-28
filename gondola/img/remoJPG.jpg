@@ -1,0 +1,189 @@
+import { generaNumAleatorioMasProbable } from "../comunes.js";
+
+export const planetasImgs = [
+    "elAmarilloNaranja.png",
+    "elRocoso.png",
+    "elRaro.webp",
+    "elDeLosMarrones.png",
+    "elAzulico.png",
+    "elDeLosRiosDeLava.png",
+    "elPuber.png",
+    "elRosica.png",
+    "elAzulRosa.png",
+    "elDeLosAnillicos.png",
+    "elRugosico.png",
+    "elRojico.png"
+];
+
+const sistemasImgs = [
+    "sist1.webp",
+    "sist2.webp",
+    "sist3.webp",
+    "sist4.webp",
+    "sist5.webp",
+];
+
+const tiposJuego = ["premio", "combate"];
+const atmosferas = ["Gaseosa", "Inerte", "Tóxica", "Denso", "Escasa", "Nebulosa", "Electromagnética", "Biológica", "Vapor"];
+const premios = ["energía", "integridad", "supervivientes"];
+
+let auxTipo;
+let auxPremio;
+
+const generaTipo = () => {
+    const probabilidad = 0.7;
+
+    if (Math.random() < probabilidad) {
+        auxTipo = 1;
+        return tiposJuego[1];
+    }
+    else {
+        return tiposJuego[0];
+    }
+
+}
+
+
+export const sistemas = [
+    {
+        nombre: "Auns",
+        planetas: [
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Espectralis",
+                    tipoPlaneta: "Gaseoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 26.8,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "En las profundidades del cosmos, se encuentra Espectralis, un planeta envuelto en una nebulosa perpetua. Las sombras y luces danzan en su atmósfera, creando paisajes oníricos." +
+                        "Habitado por los Umbrágeos, seres luminiscentes que construyen ciudades flotantes en árboles bioluminiscentes." +
+                        "Cada ciclo lunar, las sombras cobran vida en \"El Susurro de las Sombras\", revelando antiguos secretos." +
+                        "Atrae a viajeros intergalácticos en busca de su energía única y los misterios que sus sombras guardan."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Tillu",
+                    tipoPlaneta: "Helado",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 15.2,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Tillu, un planeta helado, donde la gélida atmósfera crea paisajes cubiertos de hielo. Su superficie, salpicada de formaciones glaciares, es testigo del paso del tiempo en este rincón del espacio."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Luminara Prime",
+                    tipoPlaneta: "Rocoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 20.6,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Luminara Prime, un planeta rocoso con majestuosas formaciones geológicas. Su atmósfera única da vida a paisajes que narran la historia de los elementos que lo esculpieron a lo largo de millones de años."
+                }
+            }
+        ],
+        img: sistemasImgs[Math.floor(Math.random() * sistemasImgs.length)]
+    },
+    {
+        nombre: "Alpha Prime",
+        planetas: [
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Quasar Minor",
+                    tipoPlaneta: "Fantasma",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 10.3,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Quasar Minor, un planeta fantasma donde las sombras y luces juegan en una danza eterna. La atmósfera etérea crea un escenario de belleza misteriosa, atrayendo a aquellos que buscan secretos ocultos en lo desconocido."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Nebula Raider",
+                    tipoPlaneta: "Gaseoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 18.7,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Nebula Raider, un planeta gaseoso donde la nebulosa atmosférica crea un espectáculo de luces y sombras. Su edad, marcada en sus patrones atmosféricos, cuenta la historia de su evolución a lo largo de millones de años."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Celestial Haven",
+                    tipoPlaneta: "Helado",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 22.4,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Celestial Haven, un planeta helado bañado por la luz de estrellas distantes. Su atmósfera gélida crea paisajes cristalizados, y su edad, escrita en sus glaciares, cuenta la historia de su longeva existencia."
+                }
+            }
+        ],
+        img: sistemasImgs[Math.floor(Math.random() * sistemasImgs.length)]
+    },
+    {
+        nombre: "Stellaris Delta",
+        planetas: [
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Lynx Prime",
+                    tipoPlaneta: "Rocoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 17.9,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Lynx Prime, un planeta rocoso donde las formaciones geológicas se elevan como testigos de su antigüedad. Su atmósfera única brinda vida a paisajes que cuentan la historia de los elementos que lo esculpieron durante eones."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Titan's Crest",
+                    tipoPlaneta: "Fantasma",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 14.2,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Titan's Crest, un planeta fantasma envuelto en sombras y misterios. La atmósfera etérea da forma a paisajes en constante cambio, contando la historia de un mundo marcado por la enigmática danza de la luz y la oscuridad."
+                }
+            },
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Eclipse Nexus",
+                    tipoPlaneta: "Gaseoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 21.6,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+                    descripcion: "Eclipse Nexus, un planeta gaseoso donde las luces y sombras se entrelazan en una danza cósmica. Su atmósfera, marcada por la edad, cuenta la historia de los fenómenos celestiales que han moldeado su existencia a lo largo de millones de años."
+                }
+            }
+        ],
+        img: sistemasImgs[Math.floor(Math.random() * sistemasImgs.length)]
+    },
+    {
+        nombre: "Galactron Sigma",
+        planetas: [
+            {
+                tipo: generaTipo(),
+                img: planetasImgs[Math.floor(Math.random() * planetasImgs.length)],
+                datos: {
+                    nombre: "Quanta Prime",
+                    tipoPlaneta: "Gaseoso",
+                    atmosfera: atmosferas[Math.floor(Math.random() * atmosferas.length)],
+                    edad: 12.5,
+                    hostilidad: Math.floor(Math.random() * 10) + 1,
+               
