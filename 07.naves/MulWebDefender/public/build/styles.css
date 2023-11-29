@@ -583,13 +583,13 @@ video {
 @font-face {
   font-family: 'Scorpion';
 
-  src: url('/fonts/Scorpion\ Webfont.woff') format('woff');
+  src: url('../../fonts/Scorpion\ Webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Digital-7';
 
-  src: url('/fonts/digital-7.ttf') format('truetype');
+  src: url('../../fonts/digital-7.ttf') format('truetype');
 }
 
 body {
