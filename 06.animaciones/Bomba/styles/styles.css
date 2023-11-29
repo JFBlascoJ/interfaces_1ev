@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    background-image: url("../img/devahtasion.png");
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    animation: fondo 6s 1;
+}
+
+#blanco {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    animation: blanco 6s 1 3s;
+}
+
+#bomba {
+    height: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 102%;
+    animation: bomba 2s 1;
+}
+
+#explosionDiv {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7%;
+    z-index: 1;
+    animation: hongoDiv 4s 1;    
+}
+
+#explosion {
+    transform: scaleY(1);
+    animation: hongo 4s 1 1.8s;
+    transform-origin: bottom;
+    opacity: 0;
+}
+
+#onda {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    left: 42%;
+    bottom: 0%;
+    border-radius: 1000px;
+    transform: rotateX(80deg);
+    transform-origin: center;
+    animation: expansiva 4s 1 2s;
+}
+
+#nokia {
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: nokia 8s 1;
+    width: 100px;
+}
+
+
+@keyframes expansiva {
+    0% {
+        scale: 0.1;
+        opacity: 1;
+        border: 8px solid;
+        border-color: #000000;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        border-color: #cccccc;
+    }
+
+    100% {
+        scale: 6;
+        opacity: 0;
+        border: 0px solid;
+        border-color: #ffffff00;
+    }
+}
+
+@keyframes bomba {
+    0% {
+        bottom: 102%;
+    }
+
+    100% {        
+        bottom: 14.7%;
+    }
+}
+
+@keyframes hongo {
+    0% {
+        transform: scaleX(0.1) scaleY(0.2);
+        opacity: 0;
+    }
+    
+    100% {  
+        transform: scaleX(1.5) scaleY(1);
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes blanco {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes fondo {
+    0% {
+        background-image: url("../img/ciudad.png");
+    }
+    
+    100% {
+        background-image: url("../img/ciudad.png");
+    }
+}
+
+@keyframes nokia {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 0;
+        width: 0;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    
+    100% {
+        width: 100px;
+        transform: translate(-50%, -50%) rotate(1440deg);
+    }
+}

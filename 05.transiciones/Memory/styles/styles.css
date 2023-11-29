@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#marcador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tablero {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+.carta {
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transition: transform 1s linear;
+}
+
+.seleccionada {
+    transform: rotateY(180deg);
+}
+
+.carta .frontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0s 0.5s;
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.carta .dorso {
+    transition: opacity 0s 0.5s;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.seleccionada .dorso{
+    opacity: 0;
+}
+
+.seleccionada .frontal{
+    opacity: 1;
+}
+
+.carta div {
+    width: 200px;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+}
+
+.frontal {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.dorso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px
+}
+
+span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.loro {
+    width: 150px;
+}
+
+.foto {
+    width: 80%;
+}

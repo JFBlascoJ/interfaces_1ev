@@ -1,0 +1,66 @@
+#humoCocinando, #humoQuemado {
+    position: absolute;
+    left: 10%;
+    width: 200px;
+}
+
+#ramenDiv {
+    position: absolute;
+    left: 10%;
+    top: 22%;
+}
+
+#ramenCrudo, #ramenCocinado, #ramenQuemado {
+    width: 200px;
+}
+
+#ramenCrudo, #ramenCocinado, #ramenQuemado {
+    position: absolute;
+    left: 11%;
+    top: 18%;
+}
+
+#ramenCocinado, #ramenQuemado {
+    opacity: 0;
+}
+
+#ramenCocinado {
+    transition: opacity 2s 2s;
+}
+
+#ramenQuemado {
+    transition: opacity 2s 4s;
+}
+
+#humoCocinando, #humoQuemado {
+    opacity: 0;
+}
+
+#humoCocinando {
+    transition: opacity 2s 2s;
+}
+
+#humoQuemado {
+    transition: opacity 2s 4s;
+}
+
+#hoguera, #lena {
+    position: absolute;
+    left: 8%;
+    top:40%;
+    width: 300px;
+}
+
+#hoguera {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#container:hover #hoguera{
+    opacity: 1;
+}
+
+#container:hover #ramenCocinado, #container:hover #humoCocinando,
+#container:hover #ramenQuemado, #container:hover #humoQuemado {
+    opacity: 1;
+}

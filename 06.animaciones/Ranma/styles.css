@@ -1,0 +1,247 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#calle {
+    position: absolute;
+    left: 250px;
+    width: 1400px;
+}
+
+#coche {
+    position: absolute;
+    top: 680px;
+    left: -600px;
+    width: 600px;
+    z-index: 2;
+    animation: coche 3s 1 linear, cocheVuela 4s 1 linear 2s;
+}
+
+#ranmaReady {
+    position: absolute;
+    width: 160px;
+}
+
+#bracico {
+    position: absolute;
+    top: 36px;
+    left: 16px;
+    width: 80px;
+    animation: brazo 3s 1;
+    transform-origin: right;
+}
+
+#readyDiv {
+    position: relative;
+    left: 1300px;
+    top: 650px;
+    opacity: 0;
+    z-index: 1;
+    animation: ranma 2s 1;
+}
+
+#panda {
+    position: absolute;
+    top: 650px;
+    left: 1320px;
+    width: 260px;
+    z-index: 1;
+    opacity: 0;
+    animation: pandaAparece 3s infinite, pandaPatada 500ms, 1;
+    animation-delay: 2s;
+}
+
+#paraca {
+    position: absolute;
+    top: -22px;
+    left: 320px;
+    width: 20px;
+    animation: paraca 3s 1 linear;
+    animation-delay: 5s;
+}
+
+#avion {
+    position: absolute;
+    left: 2000px;
+    top: 320px;
+    width: 100px;
+    z-index: 1;
+    animation: avion 2s 1 linear 5s;
+}
+
+@keyframes coche {
+    10% {
+        transform: scaleY(1);
+        transform-origin: right;
+        left: 745px;
+
+    }
+
+    15% {
+        transform: scaleX(0.2);
+    }
+
+    100% {
+        left: 745px;
+        transform: scaleX(0.2);
+        transform-origin: right;
+    }
+}
+
+@keyframes brazo {
+    18% {
+        transform: rotateZ(-25deg);
+    }
+
+    100% {
+        transform: rotateZ(-25deg);
+    }
+}
+
+@keyframes ranma {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    90.1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pandaAparece {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pandaPatada {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes cocheVuela {
+    0% {
+        left: 745px;
+        transform: rotateZ(0deg) scaleX(0.2);
+        transform-origin: right;
+    }
+
+    70% {
+        transform: rotateZ(-10000deg) scale(0.1);
+    }
+
+    100% {
+        transform: rotateZ(-20000deg) scale(0);
+        width: 0px;
+        transform: scale(0);
+        transform-origin: left;
+        left: 0px;
+        top: -400px;
+    }
+}
+
+@keyframes paraca {
+    0% {
+        transform: rotateZ(-40deg);
+    }
+
+    10% {
+        transform: rotateZ(40deg);
+    }
+
+    20% {
+        transform: rotateZ(-40deg);
+    }
+
+    30% {
+        transform: rotateZ(40deg);
+    }
+
+    40% {
+        transform: rotateZ(-40deg);
+    }
+
+    50% {
+        transform: rotateZ(40deg);
+        top: 320px;
+        left: 320px;
+    }
+
+    55% {
+        top: 286px;
+    }
+
+    60% {
+        top: 252px;
+    }
+
+    65% {
+        top: 218px;
+    }
+
+    70% {
+        top: 184px;
+    }
+
+    75% {
+        top: 150px;
+    }
+
+
+    80% {
+        top: 184px;
+    }
+
+    85% {
+        top: 218px;
+    }
+
+    90% {
+        top: 252px;
+    }
+
+    95% {
+        top: 286px;
+    }
+
+    100% {
+        transform: rotateZ(3000deg) scale(0);
+        top: 320px;
+        left: 800px;
+
+
+    }
+
+}
+
+@keyframes avion {
+    0% {
+        left: 1350px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}
