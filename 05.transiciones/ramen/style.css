@@ -25,11 +25,11 @@
 }
 
 #ramenCocinado {
-    transition: opacity 2s 2s;
+    transition: opacity 4s 2s;
 }
 
 #ramenQuemado {
-    transition: opacity 2s 4s;
+    transition: opacity 4s 6s;
 }
 
 #humoCocinando, #humoQuemado {
@@ -37,11 +37,11 @@
 }
 
 #humoCocinando {
-    transition: opacity 2s 2s;
+    transition: opacity 4s 2s;
 }
 
 #humoQuemado {
-    transition: opacity 2s 4s;
+    transition: opacity 4s 6s;
 }
 
 #hoguera, #lena {
