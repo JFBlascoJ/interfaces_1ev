@@ -1,3 +1,7 @@
+img {
+    cursor: pointer;
+}
+
 .fila, #container {
     height: fit-content;
     width: fit-content;
