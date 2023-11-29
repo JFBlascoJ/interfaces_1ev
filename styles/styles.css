@@ -40,10 +40,9 @@ a:hover {
 }
 
 .disabled {
-    background-color: #d1794d;
-    border: 3px solid #d1794d;
-    color: #363636;
-    cursor: not-allowed;
+    background-color: #a35f3d;
+    border: 3px solid #a35f3d;
+    color: #2e2b2b;
     pointer-events: none;
 }
 
