@@ -535,7 +535,8 @@ video {
 }
 
 html {
-  height: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body {
@@ -702,13 +703,14 @@ p {
 
 #content {
   display: flex;
+  width: 100%;
   flex-direction: column-reverse;
+  justify-content: flex-start;
 }
 
 @media (min-width: 1000px) {
   #content {
     height: 100%;
-    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
